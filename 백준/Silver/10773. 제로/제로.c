@@ -14,7 +14,7 @@ int delete(){
 int main(void){
     int k = 0;
     int n = 0; //재현이가 부르는 돈
-    int sum = 0;
+    long long int sum = 0;
 
     scanf("%d", &k);
 
@@ -26,6 +26,6 @@ int main(void){
     for(int i=0; i<last; i++){
         sum += nums[i];
     }
-    printf("%d", sum);
+    printf("%lld", sum);
     return 0;
 }
