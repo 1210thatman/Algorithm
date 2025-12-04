@@ -1,0 +1,7 @@
+SELECT ID, IFNULL(CHILD_COUNT, 0) AS CHILD_COUNT
+FROM ECOLI_DATA AS E LEFT JOIN(SELECT PARENT_ID,
+                               COUNT(*) AS CHILD_COUNT
+                               FROM ECOLI_DATA 
+                               GROUP BY PARENT_ID) AS A ON E.ID = A.PARENT_ID
+                               
+ORDER BY ID
